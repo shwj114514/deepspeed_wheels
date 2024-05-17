@@ -4,6 +4,9 @@ pip install pydantic==2.7.1 # debug
 pip install ninja==1.11.1.1
 pip install hjson==3.1.0
 pip install py-cpuinfo==9.0.0
+
+pip install numpy packaging psutil py-cpuinfo pynvml tqdm libaio deepspeed-kernels triton
+
 # pip install pydantic-core==2.18.2
 pip install pydantic-core==1.10.15
 pip install annotated-types==0.6.0
@@ -39,7 +42,7 @@ if [ -f /etc/os-release ]; then
     fi
 fi
 
-pip install numpy packaging psutil py-cpuinfo pynvml tqdm libaio deepspeed-kernels triton
+# pip install numpy packaging psutil py-cpuinfo pynvml tqdm libaio deepspeed-kernels triton
 
 echo "install torch==${CI_TORCH_VERSION}+cu${TORCH_CUDA_VERSION}"
 pip install --no-cache-dir torch==${CI_TORCH_VERSION} --index-url https://download.pytorch.org/whl/cu${TORCH_CUDA_VERSION}
