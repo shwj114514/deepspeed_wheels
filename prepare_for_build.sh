@@ -1,6 +1,11 @@
 pip install setuptools==68.0.0 wheel auditwheel-symbols
 pip install lit
-pip install pydantic==1.10.15 # debug
+pip install pydantic==2.7.1 # debug
+pip install ninja==1.11.1.1
+pip install hjson==3.1.0
+pip install py-cpuinfo==9.0.0
+pip install pydantic-core==2.18.2
+pip install annotated-types==0.6.0
 # We want to figure out the CUDA version to download pytorch
 # e.g. we can have system CUDA version being 11.7 but if torch==1.12 then we need to download the wheel from cu116
 # see https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix
@@ -31,7 +36,7 @@ if [ -f /etc/os-release ]; then
     fi
 fi
 
-pip install hjson ninja numpy packaging psutil py-cpuinfo pydantic pynvml tqdm libaio deepspeed-kernels triton
+pip install numpy packaging psutil py-cpuinfo pynvml tqdm libaio deepspeed-kernels triton
 
 echo "install torch==${CI_TORCH_VERSION}+cu${TORCH_CUDA_VERSION}"
 pip install --no-cache-dir torch==${CI_TORCH_VERSION} --index-url https://download.pytorch.org/whl/cu${TORCH_CUDA_VERSION}
