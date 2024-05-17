@@ -25,7 +25,7 @@ python --version
 pip --version
 which python
 which pip
-
+echo "Check if /etc/os-release exists"
 # Check if /etc/os-release exists
 if [ -f /etc/os-release ]; then
     # Source the os-release file
@@ -44,7 +44,8 @@ fi
 
 # pip install numpy packaging psutil py-cpuinfo pynvml tqdm libaio deepspeed-kernels triton
 
-echo "install torch==${CI_TORCH_VERSION}+cu${TORCH_CUDA_VERSION}"
+echo "begin_shwj: install torch==${CI_TORCH_VERSION}+cu${TORCH_CUDA_VERSION}"
 pip install --no-cache-dir torch==${CI_TORCH_VERSION} --index-url https://download.pytorch.org/whl/cu${TORCH_CUDA_VERSION}
+echo "end_shwj: install torch==${CI_TORCH_VERSION}+cu${TORCH_CUDA_VERSION}"
 
 pip show pydantic
