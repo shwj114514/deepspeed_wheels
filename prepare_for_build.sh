@@ -1,3 +1,6 @@
+rm /usr/local/cuda
+ln -s /usr/local/cuda-11.8 /usr/local/cuda
+
 pip install setuptools==68.0.0 wheel auditwheel-symbols
 pip install lit
 pip install pydantic==2.7.1 # debug
