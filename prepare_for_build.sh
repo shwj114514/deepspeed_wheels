@@ -1,5 +1,8 @@
+# rm /usr/local/cuda
+# ln -s /usr/local/cuda-11.8 /usr/local/cuda
+
 rm /usr/local/cuda
-ln -s /usr/local/cuda-11.8 /usr/local/cuda
+ln -s /usr/local/cuda-12.1 /usr/local/cuda
 
 pip install setuptools==68.0.0 wheel auditwheel-symbols
 pip install lit
