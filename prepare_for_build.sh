@@ -4,7 +4,8 @@ pip install pydantic==2.7.1 # debug
 pip install ninja==1.11.1.1
 pip install hjson==3.1.0
 pip install py-cpuinfo==9.0.0
-pip install pydantic-core==2.18.2
+# pip install pydantic-core==2.18.2
+pip install pydantic-core==1.10.15
 pip install annotated-types==0.6.0
 # We want to figure out the CUDA version to download pytorch
 # e.g. we can have system CUDA version being 11.7 but if torch==1.12 then we need to download the wheel from cu116
